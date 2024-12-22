@@ -7,6 +7,156 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Logo -->
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="199dp"
+        android:layout_height="190dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/restaurant_logo" />
 
 
+    <!-- Pastel de Choclo -->
+
+    <TextView
+        android:id="@+id/Pastel_de_choclo"
+        android:layout_width="129dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="40dp"
+        android:text="Pastel de choclo"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <ImageView
+        android:id="@+id/image_Pastel"
+        android:layout_width="160dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:srcCompat="@drawable/pastel_de_choclo" />
+
+    <EditText
+        android:id="@+id/quantity_pastel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        android:hint="Cantidad"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/image_Pastel"
+        app:layout_constraintTop_toBottomOf="@+id/Pastel_de_choclo" />
+
+
+    <!-- Cazuela -->
+
+    <TextView
+        android:id="@+id/title_cazuela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="108dp"
+        android:text="Cazuela"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quantity_pastel" />
+
+    <ImageView
+        android:id="@+id/image_cazuela"
+        android:layout_width="155dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="58dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_Pastel"
+        app:srcCompat="@drawable/cazuela" />
+
+    <EditText
+        android:id="@+id/quantity_cazuela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        android:hint="Cantidad"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/image_cazuela"
+        app:layout_constraintTop_toBottomOf="@+id/title_cazuela" />
+
+
+    <!-- Totales y Switch de Propina -->
+
+    <TextView
+        android:id="@+id/total_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="156dp"
+        android:text="Comida: $0"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quantity_cazuela" />
+
+    <TextView
+        android:id="@+id/tip_amount"
+        android:layout_width="84dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="200dp"
+        android:text="Propina: $0"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_food" />
+
+    <TextView
+        android:id="@+id/total_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="100dp"
+        android:text="Total: $0"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tip_amount" />
+
+    <Switch
+        android:id="@+id/switch_tip"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/tip_amount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="660dp" />
+
+    <!-- Botón de Confirmar Propina -->
+    <Button
+        android:id="@+id/btn_propina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:text="Confirmar Propina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switch_tip" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
